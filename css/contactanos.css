@@ -1,4 +1,29 @@
 
+/* ========================================
+   PALETA DE COLORES TROPICAL BRILLANTE
+   ======================================== */
+
+:root {
+    /* Colores principales */
+    --color-primary: #0077B6;          /* Azul Caribe */
+    --color-secondary: #00B4D8;        /* Turquesa */
+    --color-accent: #F77F00;           /* Naranja Atardecer */
+    --color-tertiary: #2A9D8F;         /* Verde Naturaleza */
+    --color-dark: #023E8A;             /* Azul Oscuro */
+    
+    /* Neutros */
+    --color-background: #F1FAEE;       /* Arena Clara */
+    --color-light: #ffffff;            /* Blanco */
+    --color-text: #1a1a1a;             /* Texto oscuro */
+    --color-text-light: #555555;       /* Texto gris */
+    
+    /* Sombras y bordes */
+    --shadow-sm: 0 2px 8px rgba(2, 62, 138, 0.1);
+    --shadow-md: 0 5px 15px rgba(2, 62, 138, 0.15);
+    --shadow-lg: 0 8px 32px rgba(2, 62, 138, 0.2);
+    --border-radius: 10px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -49,7 +74,7 @@ body{
     position: relative;
 }
 .hero{
-    font-family:  Impact, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     text-align: center;
     padding: 220px 20px;
@@ -57,8 +82,8 @@ body{
     overflow: hidden;
 }
 footer{
-    background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
-    color: white;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-light);
     padding: 3rem 5%;
 }
 .footer-content{
@@ -70,7 +95,7 @@ footer{
     margin-bottom: 2rem;
 }
 .footer-section h3{
-    color: #ffffff;
+    color: var(--color-light);
     margin: 1rem;
     text-align: center;
 }

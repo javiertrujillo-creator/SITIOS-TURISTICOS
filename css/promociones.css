@@ -1,3 +1,28 @@
+/* ========================================
+   PALETA DE COLORES TROPICAL BRILLANTE
+   ======================================== */
+
+:root {
+    /* Colores principales */
+    --color-primary: #0077B6;          /* Azul Caribe */
+    --color-secondary: #00B4D8;        /* Turquesa */
+    --color-accent: #F77F00;           /* Naranja Atardecer */
+    --color-tertiary: #2A9D8F;         /* Verde Naturaleza */
+    --color-dark: #023E8A;             /* Azul Oscuro */
+    
+    /* Neutros */
+    --color-background: #F1FAEE;       /* Arena Clara */
+    --color-light: #ffffff;            /* Blanco */
+    --color-text: #1a1a1a;             /* Texto oscuro */
+    --color-text-light: #555555;       /* Texto gris */
+    
+    /* Sombras y bordes */
+    --shadow-sm: 0 2px 8px rgba(2, 62, 138, 0.1);
+    --shadow-md: 0 5px 15px rgba(2, 62, 138, 0.15);
+    --shadow-lg: 0 8px 32px rgba(2, 62, 138, 0.2);
+    --border-radius: 10px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,18 +31,18 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
-    color: #2d3436;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 header {
-    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(240, 126, 180, 0.1) 100%);
-    color: #667eea;
+    background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-primary) 100%);
+    color: var(--color-light);
     text-align: center;
     padding: 25px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     letter-spacing: 0.5px;
-    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+    border-bottom: 2px solid var(--color-secondary);
 }
 
 header h1 {
@@ -33,11 +58,11 @@ header h1 {
 }
 
 .combo-card {
-    background: #ffffff;
-    border: 1px solid rgba(102, 126, 234, 0.2);
-    border-radius: 10px;
+    background: var(--color-light);
+    border: 2px solid var(--color-tertiary);
+    border-radius: var(--border-radius);
     padding: 25px;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+    box-shadow: var(--shadow-md);
     transition: all 0.4s ease;
     cursor: pointer;
     position: relative;
@@ -57,8 +82,8 @@ header h1 {
 }
 
 .combo-card:hover {
-    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
-    border-color: #667eea;
+    box-shadow: var(--shadow-lg);
+    border-color: var(--color-secondary);
 }
 
 .combo-card:hover::before {
@@ -67,8 +92,8 @@ header h1 {
 
 .combo-badge {
     display: inline-block;
-    background: #667eea;
-    color: #ffffff;
+    background: var(--color-accent);
+    color: var(--color-light);
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.75em;
@@ -79,16 +104,16 @@ header h1 {
 }
 
 .combo-card h2 {
-    color: #667eea;
+    color: var(--color-primary);
     font-size: 1.6em;
     margin-bottom: 10px;
-    border-bottom: 2px solid #667eea;
+    border-bottom: 2px solid var(--color-tertiary);
     padding-bottom: 10px;
     font-weight: 700;
 }
 
 .combo-card .descripcion {
-    color: #2d3436;
+    color: var(--color-text);
     font-size: 1em;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -96,15 +121,15 @@ header h1 {
 }
 
 .sitios-incluidos {
-    background: rgba(102, 126, 234, 0.05);
-    border-left: 4px solid #667eea;
+    background: rgba(42, 157, 143, 0.05);
+    border-left: 4px solid var(--color-tertiary);
     padding: 15px;
     margin: 20px 0;
     border-radius: 4px;
 }
 
 .sitios-incluidos h3 {
-    color: #667eea;
+    color: var(--color-primary);
     font-size: 0.95em;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -117,11 +142,11 @@ header h1 {
 }
 
 .sitios-incluidos li {
-    color: #2d3436;
+    color: var(--color-text);
     padding: 6px 0;
     font-size: 0.9em;
     line-height: 1.5;
-    border-bottom: 1px solid rgba(102, 126, 234, 0.15);
+    border-bottom: 1px solid rgba(42, 157, 143, 0.15);
     padding-bottom: 8px;
 }
 
@@ -134,7 +159,7 @@ header h1 {
     justify-content: space-between;
     margin: 20px 0;
     padding: 15px;
-    background: rgba(102, 126, 234, 0.03);
+    background: rgba(42, 157, 143, 0.03);
     border-radius: 4px;
     flex-wrap: wrap;
     gap: 10px;
@@ -146,33 +171,33 @@ header h1 {
     min-width: 150px;
     text-align: center;
     font-weight: 700;
-    color: #2d3436;
+    color: var(--color-text);
     padding: 8px;
 }
 
 .precio {
-    color: #667eea;
+    color: var(--color-accent);
     font-size: 1.1em;
 }
 
 .combo-card .incluye {
-    color: #2d3436;
+    color: var(--color-text);
     font-size: 0.85em;
     line-height: 1.5;
     padding: 12px;
-    background: rgba(102, 126, 234, 0.05);
-    border-left: 3px solid #667eea;
+    background: rgba(42, 157, 143, 0.05);
+    border-left: 3px solid var(--color-tertiary);
     margin-top: 15px;
     font-style: italic;
 }
 
 footer {
-    background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
-    color: #ffffff;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    color: var(--color-light);
     text-align: center;
     padding: 30px 20px;
     margin-top: 50px;
-    border-top: 3px solid #667eea;
+    border-top: 3px solid var(--color-secondary);
     font-size: 0.95em;
     line-height: 1.8;
 }
@@ -215,3 +240,90 @@ footer p {
         width: 100%;
     }
 }
+/*responsive*/
+@media (max-width:768px){
+    .navbar{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .logo{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .nav-links{
+        gap: 1rem;
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+    .hero{
+        min-height: 300px;
+        padding: 1.5rem;
+    }
+    .menu-grid,
+    .promo-container{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .menu-card img{
+        height: 200px;
+    }
+    .card-content,
+    .promo-section{
+        padding: 2.5rem;
+    }
+    .section-title{
+        margin-bottom: 2rem;
+    }
+    footer{
+        padding: 2rem 4%;
+    }
+    .footer-content{
+        gap: 1.5rem;
+    }
+}
+
+/*moviles muy pequeños hasta 480px*/
+
+@media(max-width:480px){
+    .navbar{
+        padding: 0.8rem;
+    }
+    .logo h1{
+        font-size: 1.3rem;
+    }
+    .nav-links{
+        gap: 0.85rem;
+    }
+    .hero{
+        min-height: 250px;
+        padding: 1rem;
+    }
+    .cta-button{
+        padding: 0.8rem 1.5rem;
+    }
+    .menu-section,
+    .promo-section{
+        padding: 2rem 3%;
+    }
+    .menu-card img{
+        height: 100px;
+    }
+    .card-content,
+    .promo-card{
+        padding: 1rem;
+    }
+    .orden-btn{
+        padding: 0.7rem;
+        font-size: 0.95rem
+    }
+    footer{
+        padding: 1.5rem 3%;
+    }
+    .footer-content{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    }
