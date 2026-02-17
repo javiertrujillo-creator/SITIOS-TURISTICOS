@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción - Huila En El Radar</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .inscripcion-container {
+            max-width: 600px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(240, 126, 180, 0.1) 100%);
+            border-radius: 15px;
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .inscripcion-container h2 {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #2d3436;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-submit:active {
+            transform: translateY(-1px);
+        }
+
+        .form-success {
+            text-align: center;
+            color: #27ae60;
+            padding: 1rem;
+            background: rgba(39, 174, 96, 0.1);
+            border-radius: 8px;
+            display: none;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar-modern">
+            <div class="navbar-container">
+                <div class="navbar-logo">
+                    <span class="logo-icon">🔍</span>
+                    <h1>Huila En El Radar</h1>
+                    <span class="logo-icon">🔍</span>
+                </div>
+
+                <ul class="navbar-menu">
+                    <li class="navbar-item">
+                        <a href="./index.html" class="navbar-link" data-page="inicio">
+                            <span class="link-text">Inicio</span>
+                            <span class="link-line"></span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./sitios.html" class="navbar-link" data-page="sitios">
+                            <span class="link-text">Sitios</span>
+                            <span class="link-line"></span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./promociones.html" class="navbar-link" data-page="promociones">
+                            <span class="link-text">Promociones</span>
+                            <span class="link-line"></span>
+                        </a>
+                    </li>
+                    <li class="navbar-item">
+                        <a href="./contactanos.html" class="navbar-link" data-page="contacto">
+                            <span class="link-text">Contacto</span>
+                            <span class="link-line"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="inscripcion-container">
+        <h2>📝 ¡Inscríbete Ya!</h2>
+        <form id="inscripcionForm">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required placeholder="+57 3XX-XXX-XXXX">
+            </div>
+
+            <div class="form-group">
+                <label for="combo">Selecciona tu Combo:</label>
+                <select id="combo" name="combo" required>
+                    <option value="">-- Selecciona un combo --</option>
+                    <option value="aventura">Combo Aventura - $350.000</option>
+                    <option value="arqueologia">Combo Arqueología - $380.000</option>
+                    <option value="naturaleza">Combo Naturaleza - $520.000</option>
+                    <option value="panoramico">Combo Panorámico - $330.000</option>
+                    <option value="premium">Combo Premium - $1.200.000</option>
+                    <option value="familias">Combo Familias - $280.000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje o comentarios:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos más sobre ti..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Inscribirse Ahora</button>
+            <div class="form-success" id="formSuccess">✓ ¡Gracias por tu inscripción! Pronto nos pondremos en contacto.</div>
+        </form>
+    </section>
+
+    <footer style="text-align: center; padding: 3rem; color: #2d3436; border-top: 1px solid rgba(0,0,0,0.1); margin-top: 3rem;">
+        <p>&copy; 2026 Huila En El Radar - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        // Prevenir que se envíe el formulario (no JavaScript para envío real)
+        document.getElementById('inscripcionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('formSuccess').style.display = 'block';
+            this.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

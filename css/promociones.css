@@ -5,18 +5,19 @@
 }
 
 body {
-    font-family: 'Georgia', 'Garamond', serif;
-    background-color: #f5f1e8;
-    color: #3d3a35;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #2d3436;
 }
 
 header {
-    background: #2c2416;
-    color: #d4af37;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(240, 126, 180, 0.1) 100%);
+    color: #667eea;
     text-align: center;
     padding: 25px;
-    font-family: 'Georgia', serif;
-    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 header h1 {
@@ -32,11 +33,11 @@ header h1 {
 }
 
 .combo-card {
-    background: #faf8f3;
-    border: 1px solid #e0d5c0;
+    background: #ffffff;
+    border: 1px solid rgba(102, 126, 234, 0.2);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
     transition: all 0.4s ease;
     cursor: pointer;
     position: relative;
@@ -56,8 +57,8 @@ header h1 {
 }
 
 .combo-card:hover {
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
-    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
 }
 
 .combo-card:hover::before {
@@ -66,8 +67,8 @@ header h1 {
 
 .combo-badge {
     display: inline-block;
-    background: #d4af37;
-    color: #2c2416;
+    background: #667eea;
+    color: #ffffff;
     padding: 8px 16px;
     border-radius: 20px;
     font-size: 0.75em;
@@ -78,16 +79,16 @@ header h1 {
 }
 
 .combo-card h2 {
-    color: #2c2416;
+    color: #667eea;
     font-size: 1.6em;
     margin-bottom: 10px;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 2px solid #667eea;
     padding-bottom: 10px;
     font-weight: 700;
 }
 
 .combo-card .descripcion {
-    color: #4a4744;
+    color: #2d3436;
     font-size: 1em;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -95,15 +96,15 @@ header h1 {
 }
 
 .sitios-incluidos {
-    background: #f0ebe0;
-    border-left: 4px solid #d4af37;
+    background: rgba(102, 126, 234, 0.05);
+    border-left: 4px solid #667eea;
     padding: 15px;
     margin: 20px 0;
     border-radius: 4px;
 }
 
 .sitios-incluidos h3 {
-    color: #2c2416;
+    color: #667eea;
     font-size: 0.95em;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -116,11 +117,11 @@ header h1 {
 }
 
 .sitios-incluidos li {
-    color: #3d3a35;
+    color: #2d3436;
     padding: 6px 0;
     font-size: 0.9em;
     line-height: 1.5;
-    border-bottom: 1px solid #e0d5c0;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.15);
     padding-bottom: 8px;
 }
 
@@ -133,7 +134,7 @@ header h1 {
     justify-content: space-between;
     margin: 20px 0;
     padding: 15px;
-    background: #fff9f0;
+    background: rgba(102, 126, 234, 0.03);
     border-radius: 4px;
     flex-wrap: wrap;
     gap: 10px;
@@ -145,33 +146,33 @@ header h1 {
     min-width: 150px;
     text-align: center;
     font-weight: 700;
-    color: #2c2416;
+    color: #2d3436;
     padding: 8px;
 }
 
 .precio {
-    color: #d4af37;
+    color: #667eea;
     font-size: 1.1em;
 }
 
 .combo-card .incluye {
-    color: #5a5750;
+    color: #2d3436;
     font-size: 0.85em;
     line-height: 1.5;
     padding: 12px;
-    background: #e8ddc8;
-    border-left: 3px solid #d4af37;
+    background: rgba(102, 126, 234, 0.05);
+    border-left: 3px solid #667eea;
     margin-top: 15px;
     font-style: italic;
 }
 
 footer {
-    background: #2c2416;
-    color: #d4af37;
+    background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
+    color: #ffffff;
     text-align: center;
     padding: 30px 20px;
     margin-top: 50px;
-    border-top: 3px solid #d4af37;
+    border-top: 3px solid #667eea;
     font-size: 0.95em;
     line-height: 1.8;
 }

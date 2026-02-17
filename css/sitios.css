@@ -1,17 +1,18 @@
 body {
     margin: 0;
-    font-family: 'Georgia', 'Garamond', serif;
-    background-color: #f5f1e8;
-    color: #3d3a35;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #2d3436;
 }
 
 header {
-    background: #2c2416;
-    color: #d4af37;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(240, 126, 180, 0.1) 100%);
+    color: #667eea;
     text-align: center;
     padding: 25px;
-    font-family: 'Georgia', serif;
-    letter-spacing: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 .contenedor {
@@ -22,12 +23,12 @@ header {
 }
 
 .card {
-    background: #faf8f3;
+    background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
     overflow: hidden;
     transition: all 0.4s ease;
-    border: 1px solid #e0d5c0;
+    border: 1px solid rgba(102, 126, 234, 0.2);
     cursor: pointer;
     position: relative;
     outline: none;
@@ -50,13 +51,13 @@ header {
 }
 
 .card:hover {
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
-    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
 }
 
 .card:focus-within {
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.25);
-    border-color: #d4af37;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
 }
 
 .card:focus-within .card-extra {
@@ -74,17 +75,17 @@ header {
 
 .card h2 {
     padding: 15px 10px 10px;
-    color: #2c2416;
-    font-family: 'Georgia', serif;
+    color: #667eea;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 700;
     margin: 0;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 2px solid #667eea;
     font-size: 1.15em;
 }
 
 .card p {
     padding: 12px 10px 15px;
-    color: #3d3a35;
+    color: #2d3436;
     line-height: 1.5;
     font-size: 0.95em;
     margin: 0;
@@ -95,23 +96,23 @@ header {
     max-height: 0;
     overflow: hidden;
     transition: all 0.4s ease;
-    color: #2c2416;
+    color: #667eea;
     font-size: 0.85em;
     line-height: 1.4;
-    border-top: 1px solid #e0d5c0;
+    border-top: 1px solid rgba(102, 126, 234, 0.2);
     font-style: italic;
     padding: 0 10px 0;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    background: #faf8f3;
-    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    background: #ffffff;
+    box-shadow: 0 -2px 10px rgba(102, 126, 234, 0.1);
 }
 
 .card-extra div {
     padding: 5px 0;
-    border-bottom: 1px solid #f0ebe0;
+    border-bottom: 1px solid rgba(102, 126, 234, 0.2);
 }
 
 .card-extra div:last-child {
@@ -119,7 +120,7 @@ header {
 }
 
 .card-extra strong {
-    color: #d4af37;
+    color: #667eea;
     font-style: normal;
     font-weight: 700;
 }

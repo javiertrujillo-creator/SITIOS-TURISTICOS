@@ -9,6 +9,7 @@ body{
     line-height: 1.6;
     color: #2d3436;
     background: #f8f9fa;
+    padding-top: 80px;
 }
 .container{
     max-width: 1400px;
@@ -16,38 +17,245 @@ body{
     padding: 0 20px;
 }
 
-.navbar{
-    background-color: white;
-    padding: 1rem 0;
-    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
-    position: sticky;
+.navbar-modern {
+    position: fixed;
     top: 0;
+    width: 100%;
     z-index: 1000;
-}
-.navbar .container{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.logo h1{
-    color: black;
-    font-size: 2rem;
-    font-weight: 900;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.15) 0%, rgba(240, 126, 180, 0.15) 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    animation: slideDownNav 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.nav-menu{
+/* Animación de entrada de la navbar */
+@keyframes slideDownNav {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navbar-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.2rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo con efectos */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    animation: fadeInLogo 0.8s ease-out;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar-logo h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    letter-spacing: -0.5px;
+}
+
+.logo-icon {
+    font-size: 1.6rem;
+    animation: bounceIcon 2s ease-in-out infinite;
+}
+
+.logo-icon:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIcon {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Menú navegación */
+.navbar-menu {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 3rem;
+    align-items: center;
 }
-.nav-menu a{
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.05rem;
+
+.navbar-item {
     position: relative;
 }
+
+/* Enlaces con efecto de línea animada */
+.navbar-link {
+    position: relative;
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0.5rem 0;
+    display: inline-block;
+    transition: color 0.3s ease;
+    overflow: hidden;
+}
+
+/* Línea animada que aparece desde el centro */
+.link-line {
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #667eea 0%, #f07eb4 100%);
+    transform: translateX(-50%);
+    transition: width 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    border-radius: 2px;
+}
+
+/* Efecto hover: línea se expande desde el centro */
+.navbar-link:hover .link-line {
+    width: 100%;
+}
+
+/* Cambio de color suave en hover */
+.navbar-link:hover {
+    color: #667eea;
+}
+
+/* Indicador del enlace activo */
+.navbar-link.active .link-line {
+    width: 100%;
+    animation: lineActivePulse 1.5s ease-in-out infinite;
+}
+
+.navbar-link.active {
+    color: #667eea;
+    font-weight: 700;
+}
+
+@keyframes lineActivePulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        opacity: 0.8;
+        box-shadow: 0 0 8px 2px rgba(102, 126, 234, 0.2);
+    }
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+    .navbar-modern {
+        padding: 1rem 0;
+    }
+
+    .navbar-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 1rem 20px;
+    }
+
+    .navbar-logo h1 {
+        font-size: 1.4rem;
+    }
+
+    .logo-icon {
+        font-size: 1.2rem;
+    }
+
+    .navbar-menu {
+        gap: 2rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .navbar-link {
+        font-size: 0.95rem;
+    }
+}
+
+/* Responsive: Mobile pequeño */
+@media (max-width: 480px) {
+    .navbar-modern {
+        animation: slideDownNav 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .navbar-container {
+        padding: 0.8rem 15px;
+    }
+
+    .navbar-logo {
+        gap: 0.5rem;
+    }
+
+    .navbar-logo h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo-icon {
+        font-size: 1rem;
+    }
+
+    .navbar-menu {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+    }
+
+    .navbar-link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0;
+    }
+
+    .link-line {
+        height: 2px;
+    }
+}
+
+/* Media queries para ajustar contenido con navbar fixed */
+@media (max-width: 768px) {
+    body {
+        padding-top: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding-top: 100px;
+    }
+}
+
 .hero{
     background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
     url("https://images.unsplash.com/photo-1697823411806-3402bf656659?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")center/cover;
@@ -88,6 +296,57 @@ body{
 .btn-primary:hover{
     transform: translateY(-5px) scale(1.05);
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3) ;
+}
+
+/* Footer moderno con degradado */
+footer {
+    background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
+    color: white;
+    padding: 3rem 5%;
+    margin-top: 4rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h3 {
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+footer p, footer a {
+    color: rgba(255, 255, 255, 0.9);
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section {
+    text-align: center;
+}
+
+.footer-section p {
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /*responsive*/
