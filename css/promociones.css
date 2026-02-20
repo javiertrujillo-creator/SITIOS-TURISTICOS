@@ -1,22 +1,20 @@
-/* ========================================
-   PALETA DE COLORES TROPICAL BRILLANTE
-   ======================================== */
+
 
 :root {
-    /* Colores principales */
-    --color-primary: #0077B6;          /* Azul Caribe */
-    --color-secondary: #00B4D8;        /* Turquesa */
-    --color-accent: #F77F00;           /* Naranja Atardecer */
-    --color-tertiary: #2A9D8F;         /* Verde Naturaleza */
-    --color-dark: #023E8A;             /* Azul Oscuro */
     
-    /* Neutros */
-    --color-background: #F1FAEE;       /* Arena Clara */
-    --color-light: #ffffff;            /* Blanco */
-    --color-text: #1a1a1a;             /* Texto oscuro */
+    --color-primary: #0077B6;          
+    --color-secondary: #00B4D8;        
+    --color-accent: #F77F00;           
+    --color-tertiary: #2A9D8F;         
+    --color-dark: #023E8A;            
+    
+    
+    --color-background: #F1FAEE;       
+    --color-light: #ffffff;            
+    --color-text: #1a1a1a;             
     --color-text-light: #555555;       /* Texto gris */
     
-    /* Sombras y bordes */
+    
     --shadow-sm: 0 2px 8px rgba(2, 62, 138, 0.1);
     --shadow-md: 0 5px 15px rgba(2, 62, 138, 0.15);
     --shadow-lg: 0 8px 32px rgba(2, 62, 138, 0.2);
@@ -33,6 +31,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--color-background);
     color: var(--color-text);
+    margin: 0;
+    overflow-x: hidden;
 }
 
 header {
@@ -50,11 +50,20 @@ header h1 {
     font-weight: 700;
 }
 
+
 .contenedor {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+    padding: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.titulo2{
+    grid-column: 1 / -1;
+    text-align: center;
 }
 
 .combo-card {
@@ -215,115 +224,87 @@ footer p {
     }
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .contenedor {
+
+
+
+/*responsive mejorado para tablas*/
+/* ============================= */
+/* 📱 TABLETS Y CELULARES */
+/* ============================= */
+@media (max-width: 992px){
+    .contenedor{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 40px 20px;
+    }
+}
+
+/* ============================= */
+/* 📱 CELULARES */
+/* ============================= */
+@media (max-width: 768px){
+    .contenedor{
+        grid-template-columns: 1fr; /* 🔥 UNA SOLA COLUMNA */
+        gap: 25px;
+        padding: 30px 16px;
+    }
+
+    header h1{
+        font-size: 1.8em;
+    }
+
+    .combo-card{
         padding: 20px;
-        gap: 20px;
     }
 
-    header h1 {
-        font-size: 1.6em;
+    .combo-card h2{
+        font-size: 1.4em;
     }
 
-    .combo-card {
-        padding: 20px;
-    }
-
-    .combo-info {
+    .combo-info{
         flex-direction: column;
+        align-items: stretch;
     }
 
     .duracion,
-    .precio {
-        min-width: auto;
+    .precio{
+        min-width: unset;
         width: 100%;
     }
 }
-/*responsive*/
-@media (max-width:768px){
-    .navbar{
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
+
+/* ============================= */
+/* 📱 CELULARES MUY PEQUEÑOS */
+/* ============================= */
+@media (max-width: 480px){
+    .contenedor{
+        padding: 25px 12px;
+        gap: 20px;
     }
-    .logo{
-        font-size: 1.5rem;
-        text-align: center;
+
+    header{
+        padding: 18px 12px;
     }
-    .nav-links{
-        gap: 1rem;
-        font-size: 0.9rem;
-        justify-content: center;
+
+    header h1{
+        font-size: 1.5em;
     }
-    .hero{
-        min-height: 300px;
-        padding: 1.5rem;
+
+    .combo-card{
+        padding: 16px;
     }
-    .menu-grid,
-    .promo-container{
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+
+    .combo-card h2{
+        font-size: 1.25em;
     }
-    .menu-card img{
-        height: 200px;
+
+    .combo-badge{
+        font-size: 0.7em;
+        padding: 6px 12px;
     }
-    .card-content,
-    .promo-section{
-        padding: 2.5rem;
-    }
-    .section-title{
-        margin-bottom: 2rem;
-    }
+
     footer{
-        padding: 2rem 4%;
-    }
-    .footer-content{
-        gap: 1.5rem;
+        padding: 25px 15px;
+        font-size: 0.9em;
     }
 }
-
-/*moviles muy pequeños hasta 480px*/
-
-@media(max-width:480px){
-    .navbar{
-        padding: 0.8rem;
-    }
-    .logo h1{
-        font-size: 1.3rem;
-    }
-    .nav-links{
-        gap: 0.85rem;
-    }
-    .hero{
-        min-height: 250px;
-        padding: 1rem;
-    }
-    .cta-button{
-        padding: 0.8rem 1.5rem;
-    }
-    .menu-section,
-    .promo-section{
-        padding: 2rem 3%;
-    }
-    .menu-card img{
-        height: 100px;
-    }
-    .card-content,
-    .promo-card{
-        padding: 1rem;
-    }
-    .orden-btn{
-        padding: 0.7rem;
-        font-size: 0.95rem
-    }
-    footer{
-        padding: 1.5rem 3%;
-    }
-    .footer-content{
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        text-align: center;
-    }
-    
-    }
