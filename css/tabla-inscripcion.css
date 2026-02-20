@@ -1,37 +1,35 @@
 :root {
-   
-    --color-primary: #0077B6;          
-    --color-secondary: #00B4D8;        
-    --color-accent: #F77F00;           
-    --color-tertiary: #2A9D8F;         
-    --color-dark: #023E8A;             
-   
-    --color-background: #F1FAEE;       
-    --color-light: #ffffff;            
-    --color-text: #1a1a1a;             
-    --color-text-light: #555555;       
-    
-    
-    --shadow-sm: 0 2px 8px rgba(2, 62, 138, 0.1);
-    --shadow-md: 0 5px 15px rgba(2, 62, 138, 0.15);
-    --shadow-lg: 0 8px 32px rgba(2, 62, 138, 0.2);
+    --color-primary: #4E1D3A;
+    --color-secondary: #B18F6A;
+    --color-accent: #F2E8CF;
+    --color-tertiary: #E9E1D8;
+    --color-dark: #9B8F8A;
+
+    --color-background: #F2E8CF;
+    --color-light: #E9E1D8;
+    --color-text: #4E1D3A;
+    --color-text-light: #9B8F8A;
+
+    --shadow-sm: 0 2px 8px rgba(78, 29, 58, 0.1);
+    --shadow-md: 0 5px 15px rgba(78, 29, 58, 0.15);
+    --shadow-lg: 0 8px 32px rgba(78, 29, 58, 0.2);
     --border-radius: 10px;
 }
 .inscripcion-container {
             max-width: 600px;
             margin: 3rem auto;
             padding: 2rem;
-            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(240, 126, 180, 0.1) 100%);
+            background: linear-gradient(135deg, rgba(78, 29, 58, 0.08) 0%, rgba(177, 143, 106, 0.08) 100%);
             border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(78, 29, 58, 0.1);
+            border: 1px solid rgba(233, 225, 216, 0.3);
         }
 
         .inscripcion-container h2 {
             text-align: center;
             font-size: 2rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -46,7 +44,7 @@
             display: block;
             margin-bottom: 0.5rem;
             font-weight: 600;
-            color: #2d3436;
+            color: var(--color-text);
         }
 
         .form-group input,
@@ -54,7 +52,7 @@
         .form-group select {
             width: 100%;
             padding: 0.75rem;
-            border: 2px solid rgba(102, 126, 234, 0.3);
+            border: 2px solid rgba(78, 29, 58, 0.3);
             border-radius: 8px;
             font-family: inherit;
             font-size: 1rem;
@@ -65,8 +63,8 @@
         .form-group textarea:focus,
         .form-group select:focus {
             outline: none;
-            border-color: #667eea;
-            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            border-color: var(--color-primary);
+            box-shadow: 0 0 0 3px rgba(78, 29, 58, 0.1);
             transform: translateY(-2px);
         }
 
@@ -78,8 +76,8 @@
         .btn-submit {
             width: 100%;
             padding: 1rem;
-            background: linear-gradient(135deg, #667eea 0%, #f07eb4 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+            color: var(--color-light);
             border: none;
             border-radius: 8px;
             font-weight: 700;
@@ -90,7 +88,7 @@
 
         .btn-submit:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            box-shadow: 0 10px 30px rgba(78, 29, 58, 0.3);
         }
 
         .btn-submit:active {
@@ -99,9 +97,9 @@
 
         .form-success {
             text-align: center;
-            color: #27ae60;
+            color: var(--color-secondary);
             padding: 1rem;
-            background: rgba(39, 174, 96, 0.1);
+            background: rgba(177, 143, 106, 0.08);
             border-radius: 8px;
             display: none;
             margin-top: 1rem;
@@ -132,7 +130,7 @@ body{
     z-index: 1000;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    background: linear-gradient(135deg, rgba(2, 62, 138, 0.95) 0%, rgba(0, 119, 182, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(78, 29, 58, 0.95) 0%, rgba(177, 143, 106, 0.95) 100%);
     border-bottom: 2px solid var(--color-secondary);
     box-shadow: var(--shadow-lg);
     animation: slideDownNav 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -270,11 +268,11 @@ body{
 @keyframes lineActivePulse {
     0%, 100% {
         opacity: 1;
-        box-shadow: 0 0 0 0 rgba(0, 180, 216, 0.4);
+        box-shadow: 0 0 0 0 rgba(177, 143, 106, 0.4);
     }
     50% {
         opacity: 0.8;
-        box-shadow: 0 0 8px 2px rgba(0, 180, 216, 0.2);
+        box-shadow: 0 0 8px 2px rgba(177, 143, 106, 0.2);
     }
 }
 
@@ -359,9 +357,9 @@ body{
 }
 
 .hero{
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    background: linear-gradient(rgba(78,29,58,0.5),rgba(78,29,58,0.5)),
     url("https://images.unsplash.com/photo-1697823411806-3402bf656659?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")center/cover;
-    color: white;
+    color: var(--color-light);
     text-align: center;
     padding: 220px 20px;
     position: relative;
@@ -375,7 +373,7 @@ body{
     font-size: 3.5rem;
     margin-bottom: 1em;
     font-weight: 900;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: 3px 3px 6px rgba(78, 29, 58, 0.3);
     animation: sliderdown 0.8s ease-out;
 }
 .hero-content p{

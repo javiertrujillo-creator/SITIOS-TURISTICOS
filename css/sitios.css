@@ -1,22 +1,19 @@
 
 :root {
-    
-    --color-primary: #0077B6;          
-    --color-secondary: #00B4D8;        
-    --color-accent: #F77F00;           
-    --color-tertiary: #2A9D8F;         
-    --color-dark: #023E8A;             
+    --color-primary: #4E1D3A;
+    --color-secondary: #B18F6A;
+    --color-accent: #F2E8CF;
+    --color-tertiary: #E9E1D8;
+    --color-dark: #9B8F8A;
 
-    
-    --color-background: #F1FAEE;       
-    --color-light: #ffffff;            
-    --color-text: #1a1a1a;             
-    --color-text-light: #555555;       
-    
-    
-    --shadow-sm: 0 2px 8px rgba(2, 62, 138, 0.1);
-    --shadow-md: 0 5px 15px rgba(2, 62, 138, 0.15);
-    --shadow-lg: 0 8px 32px rgba(2, 62, 138, 0.2);
+    --color-background: #F2E8CF;
+    --color-light: #E9E1D8;
+    --color-text: #4E1D3A;
+    --color-text-light: #9B8F8A;
+
+    --shadow-sm: 0 2px 8px rgba(78, 29, 58, 0.1);
+    --shadow-md: 0 5px 15px rgba(78, 29, 58, 0.15);
+    --shadow-lg: 0 8px 32px rgba(78, 29, 58, 0.2);
     --border-radius: 10px;
 }
 
@@ -129,12 +126,12 @@ header {
     left: 0;
     right: 0;
     background: var(--color-light);
-    box-shadow: 0 -2px 10px rgba(2, 62, 138, 0.1);
+    box-shadow: 0 -2px 10px rgba(78, 29, 58, 0.1);
 }
 
 .card-extra div {
     padding: 5px 0;
-    border-bottom: 1px solid rgba(2, 62, 138, 0.15);
+    border-bottom: 1px solid rgba(78, 29, 58, 0.15);
 }
 
 .card-extra div:last-child {
